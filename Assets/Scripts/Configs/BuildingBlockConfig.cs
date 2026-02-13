@@ -6,5 +6,6 @@ namespace Configs
     public class BuildingBlockConfig : ScriptableObject
     {
         public float blockFallingSpeed;
+        public float perfectScoreAllowed; // How close to perfect is considered "perfect"
     }
 }

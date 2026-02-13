@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7300f97e57648c2a37dcf97d7bf292b, type: 3}
-  m_Name: BuildingBlockConfig
-  m_EditorClassIdentifier: Assembly-CSharp::Configs.BuildingBlockConfig
-  blockFallingSpeed: 2
-  perfectScoreAllowed: 95
+  m_Script: {fileID: 11500000, guid: 32afde2e39d244409f133bc6333753a7, type: 3}
+  m_Name: PlayerDataConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Configs.PlayerDataConfig
+  startingMoney: 0
