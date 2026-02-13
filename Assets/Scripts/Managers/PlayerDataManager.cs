@@ -6,7 +6,7 @@ public class PlayerDataManager : MonoBehaviour
 {
     public PlayerDataConfig playerConfig;
 
-    public float playerMoney;
+    private float _playerMoney;
     
     //UI
     public TMP_Text playerMoneyText;
@@ -14,7 +14,7 @@ public class PlayerDataManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerMoney = playerConfig.startingMoney;
+        _playerMoney = playerConfig.startingMoney;
     }
 
     // Update is called once per frame
@@ -25,12 +25,27 @@ public class PlayerDataManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        playerMoneyText.SetText($"{playerMoney} AED");
+        playerMoneyText.SetText($"{_playerMoney} AED");
     }
 
     public void AddMoney(float amount)
     {
         Debug.Log($"Money added: {amount}");
-        playerMoney += amount;
+        _playerMoney += amount;
+    }
+
+    public bool TryDeductMoney(float amount)
+    {
+        if (_playerMoney >= amount)
+        {
+            Debug.Log($"Money deducted: {amount}");
+            _playerMoney -= amount;
+            return true;
+        }
+        else
+        {
+            Debug.Log($"Can't deduct money: {amount}");
+            return false;
+        }
     }
 }

@@ -1,4 +1,6 @@
 using CodeMonkey.Toolkit.TFunctionTimer;
+using DefaultNamespace;
+using Managers;
 using UnityEngine;
 
 public class Claw : MonoBehaviour
@@ -7,13 +9,14 @@ public class Claw : MonoBehaviour
     public Transform ropePivot; // The point where rope attaches
     public BuildingBlock block;
     public Transform spawnPoint;
-    public float respawnTime = 1f;
+    public Stat respawnTime;
     public float swingSpeed = 1f;
     public float swingAngle = 30f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        respawnTime.Reset();
     }
 
     // Update is called once per frame
@@ -39,9 +42,9 @@ public class Claw : MonoBehaviour
                 gmbj.transform.SetParent(ropePivot);
                 block = gmbj.GetComponent<BuildingBlock>();
                 
-            }, respawnTime);
+            }, respawnTime.GetValue());
             
-            transform.localPosition += Vector3.up;
+            transform.localPosition += Vector3.up * ConfigsManager.Instance.clawConfig.elevationModifier;
         }
     }
 }
