@@ -1,8 +1,10 @@
+using Managers;
 using UnityEngine;
 
 public class BuildingBlock : MonoBehaviour
 {
     public bool released;
+    public bool firstBlock;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,15 +17,13 @@ public class BuildingBlock : MonoBehaviour
     {
         if (released)
         {
-            transform.localPosition -= Time.deltaTime * Vector3.up;
+            transform.localPosition -= Vector3.up * (Time.deltaTime * ConfigsManager.Instance.buildingBlockConfig.blockFallingSpeed);
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"Collision! {other.gameObject.name}");
-        
-        if (other.collider.CompareTag("Ground"))
+        if (other.collider.CompareTag("Ground") || other.collider.CompareTag("BuildingBlock"))
         {
             released = false;
         }
