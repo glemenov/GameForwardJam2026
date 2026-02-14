@@ -50,7 +50,7 @@ public class BuildingBlock : MonoBehaviour
                 }
 
                 Debug.Log($"Total reward: {totalReward}");
-                HeadManager.Instance.playerDataManager.AddMoney(totalReward);
+                HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(totalReward));
 
                 return;
             }

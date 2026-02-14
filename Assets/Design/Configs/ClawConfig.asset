@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5120c1e2f24a7aaedfa50b8412dfa8, type: 3}
   m_Name: ClawConfig
   m_EditorClassIdentifier: Assembly-CSharp::Configs.ClawConfig
-  elevationModifier: 1
-  minDistanceForElevation: 6.5
+  elevationModifier: 0.5
+  minDistanceForElevation: 6.6

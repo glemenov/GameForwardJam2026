@@ -26,7 +26,7 @@ namespace Upgrades
 
         public override string DisplayInfo()
         {
-            return $"{upgradeLevels[currentLevel].value} {displayName}";
+            return $"+{upgradeLevels[currentLevel].value} {displayName}";
         }
     }
 }

@@ -66,10 +66,12 @@ public class Claw : MonoBehaviour
 
     private void UpgradeCurrentBlock()
     {
+        if (block == null) return;
+        
         var gmbj = Instantiate(blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()], block.transform.position, block.transform.rotation);
         gmbj.transform.SetParent(ropePivot);
         
-        Destroy(block);
+        Destroy(block.gameObject);
         
         block = gmbj.GetComponent<BuildingBlock>();
     }

@@ -25,7 +25,6 @@ namespace DefaultNamespace
                 result += (value * percentageModifier / 100f);
             }
 
-            Debug.Log($"Returning value: {result}");
             return result;
         }
     }
