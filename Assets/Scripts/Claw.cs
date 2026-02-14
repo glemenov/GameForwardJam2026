@@ -57,7 +57,6 @@ public class Claw : MonoBehaviour
         // Last building block is dropped, checking distance if we need to elevate claw
         if (_lastDroppedBlock != null && !_lastDroppedBlock.released)
         {
-            Debug.Log($"Distance {Vector3.Distance(_lastDroppedBlock.transform.position, transform.position)}");
             if (Vector3.Distance(_lastDroppedBlock.transform.position, transform.position) < ConfigsManager.Instance.clawConfig.minDistanceForElevation)
             {
                 transform.localPosition += Vector3.up * ConfigsManager.Instance.clawConfig.elevationModifier;

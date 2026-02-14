@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerDataConfig
   m_EditorClassIdentifier: Assembly-CSharp::Configs.PlayerDataConfig
   startingMoney: 0
+  defaultComboMultiplier: 1.2

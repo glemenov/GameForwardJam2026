@@ -6,5 +6,6 @@ namespace Configs
     public class PlayerDataConfig : ScriptableObject
     {
         public float startingMoney;
+        public float defaultComboMultiplier;
     }
 }

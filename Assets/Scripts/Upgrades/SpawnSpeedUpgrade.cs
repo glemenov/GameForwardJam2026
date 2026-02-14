@@ -8,40 +8,19 @@ namespace Upgrades
 {
     public class SpawnSpeedUpgrade : Upgrade
     {
-        [TableList] public List<SpeedUpgrade> speedLevels = new List<SpeedUpgrade>();
         public Stat statToApply;
 
-        public override void BuyUpgrade()
+        public override void InitiateUpgrade()
         {
-            if (HeadManager.Instance.playerDataManager.TryDeductMoney(speedLevels[currentLevel].price))
+            if (!base.TryBuyUpgrade())
             {
-                currentLevel++;
-
-                if (currentLevel >= speedLevels.Count)
-                {
-                    maxLevelReached = true;
-                    return;
-                }
-
-                statToApply.percentageModifiers.Add(speedLevels[currentLevel].speed);
+                statToApply.percentageModifiers.Add(upgradeLevels[currentLevel].value);
             }
-        }
-
-        [Serializable]
-        public class SpeedUpgrade
-        {
-            public int speed;
-            public int price;
         }
 
         public override string DisplayInfo()
         {
-            return $"{speedLevels[currentLevel].speed}% {displayName}";
-        }
-
-        public override string PriceInfo()
-        {
-            return $"{speedLevels[currentLevel].price} AED";
+            return $"{upgradeLevels[currentLevel].value}% {displayName}";
         }
     }
 
@@ -52,17 +31,44 @@ namespace Upgrades
         public int currentLevel = 0;
         public bool maxLevelReached = false;
 
+        [TableList] public List<UpgradeLevel> upgradeLevels = new List<UpgradeLevel>();
+
+        [Serializable]
+        public class UpgradeLevel
+        {
+            public float value;
+            public int price;
+        }
+
         public virtual string DisplayInfo()
         {
             return "";
         }
-        
+
         public virtual string PriceInfo()
         {
-            return "";
+            return $"{upgradeLevels[currentLevel].price} AED";
         }
         
-        public virtual void BuyUpgrade() {}
+        public virtual void InitiateUpgrade() {}
+        
+        public virtual bool TryBuyUpgrade()
+        {
+            if (HeadManager.Instance.playerDataManager.TryDeductMoney(upgradeLevels[currentLevel].price)
+                && !maxLevelReached)
+            {
+                currentLevel++;
+
+                if (currentLevel + 1 >= upgradeLevels.Count)
+                {
+                    maxLevelReached = true;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
 
         public bool IsMaxLevelReached()
         {

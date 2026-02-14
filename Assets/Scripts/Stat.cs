@@ -8,7 +8,7 @@ namespace DefaultNamespace
     {
         public float defaultValue;
         public float value;
-        public List<int> percentageModifiers = new List<int>();
+        public List<float> percentageModifiers = new List<float>();
 
         public void Reset()
         {

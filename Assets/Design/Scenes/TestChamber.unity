@@ -510,14 +510,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Claw
   blockPrefabs:
-  - {fileID: 2830779975284725045, guid: 5807ff931bb524141b88438330e08356, type: 3}
-  - {fileID: 2830779975284725045, guid: 764cf94e041bcf44988d448e602d713e, type: 3}
-  - {fileID: 2830779975284725045, guid: 403db9b8a3e1a5241aa62c2c20405445, type: 3}
-  - {fileID: 2830779975284725045, guid: 46007e98f5867d94d86a1cfc8297173e, type: 3}
-  - {fileID: 2830779975284725045, guid: e57a98f111710984d8ad4feae43aee50, type: 3}
-  - {fileID: 2830779975284725045, guid: c01b1b2b2a8152a4cb9faaa409ad2c06, type: 3}
+  - {fileID: 2550097180377328071, guid: 5807ff931bb524141b88438330e08356, type: 3}
+  - {fileID: 2550097180377328071, guid: 56a615d5a654ba84ea3c638dc975f053, type: 3}
+  - {fileID: 2550097180377328071, guid: 27c406fbd5f8b974b8e880a33acfc708, type: 3}
+  - {fileID: 2550097180377328071, guid: 066c7c74d22991a4ca0a67b94ad00e23, type: 3}
+  - {fileID: 2550097180377328071, guid: 87fc741d65a7994408778b4a78c48528, type: 3}
+  - {fileID: 2550097180377328071, guid: 50afbd4aff4a3264fbbc159f007a4116, type: 3}
   ropePivot: {fileID: 835124961}
-  block: {fileID: 0}
+  block: {fileID: 696264614}
   spawnPoint: {fileID: 1773778298}
   respawnTime: {fileID: 11400000, guid: a719cf30720c3d84eb5a5bb5dda3762b, type: 2}
   swingSpeed: 1.3
@@ -1445,18 +1445,18 @@ MonoBehaviour:
   displayName: Block Tier
   currentLevel: 0
   maxLevelReached: 0
-  blockLevels:
-  - tier: 1
+  upgradeLevels:
+  - value: 1
     price: 2000
-  - tier: 2
+  - value: 2
     price: 4500
-  - tier: 3
+  - value: 3
     price: 9500
-  - tier: 4
+  - value: 4
     price: 15000
-  - tier: 5
+  - value: 5
     price: 21500
-  - tier: 6
+  - value: 6
     price: 30000
 --- !u!1 &566741956
 GameObject:
@@ -1682,7 +1682,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1800310329}
         m_TargetAssemblyTypeName: Upgrades.SpawnSpeedUpgrade, Assembly-CSharp
-        m_MethodName: BuyUpgrade
+        m_MethodName: InitiateUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1746,6 +1746,83 @@ MonoBehaviour:
   text: {fileID: 1467506558}
   priceText: {fileID: 1561257433}
   Button: {fileID: 679699089}
+--- !u!1001 &696264612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 835124961}
+    m_Modifications:
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513900380505439513, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: firstBlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550097180377328071, guid: 5807ff931bb524141b88438330e08356, type: 3}
+      propertyPath: m_Name
+      value: Tier1_BuildingBlock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5807ff931bb524141b88438330e08356, type: 3}
+--- !u!4 &696264613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
+  m_PrefabInstance: {fileID: 696264612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &696264614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2513900380505439513, guid: 5807ff931bb524141b88438330e08356, type: 3}
+  m_PrefabInstance: {fileID: 696264612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032497825822d4943b419a232359d352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingBlock
 --- !u!1 &716234318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,8 +2029,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 696264613}
   - {fileID: 1773778298}
-  - {fileID: 1661784602}
   m_Father: {fileID: 302089055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &835124962
@@ -2016,7 +2093,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.15178299
+        value: 0.062496185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2234,6 +2311,7 @@ Transform:
   m_Children:
   - {fileID: 1800310328}
   - {fileID: 563103929}
+  - {fileID: 1345435013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1260714919
@@ -2555,7 +2633,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 563103930}
         m_TargetAssemblyTypeName: Upgrades.BlockTierUpgrade, Assembly-CSharp
-        m_MethodName: BuyUpgrade
+        m_MethodName: InitiateUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2603,6 +2681,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297282456}
   m_CullTransparentMesh: 1
+--- !u!1 &1345435012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345435013}
+  - component: {fileID: 1345435014}
+  m_Layer: 0
+  m_Name: ComboMultiplierUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345435013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345435012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1250553306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345435014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345435012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e21bfdc68209c7458c85b564ebaf545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades.ComboMultiplierUpgrade
+  displayName: Combo Multiplier
+  currentLevel: 0
+  maxLevelReached: 0
+  upgradeLevels:
+  - value: 1.4
+    price: 200
+  - value: 1.6
+    price: 800
+  - value: 1.8
+    price: 2600
+  - value: 2
+    price: 6500
+  - value: 2.5
+    price: 10200
+  - value: 3
+    price: 13100
 --- !u!1 &1385733807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ba8491a5ab1464d9b6d843c3e2cd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
-  upgrade: {fileID: 1800310329}
+  upgrade: {fileID: 1345435014}
   text: {fileID: 1260714921}
   priceText: {fileID: 1782812159}
   Button: {fileID: 1385733810}
@@ -2704,9 +2842,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800310329}
-        m_TargetAssemblyTypeName: Upgrades.SpawnSpeedUpgrade, Assembly-CSharp
-        m_MethodName: BuyUpgrade
+      - m_Target: {fileID: 1345435014}
+        m_TargetAssemblyTypeName: Upgrades.ComboMultiplierUpgrade, Assembly-CSharp
+        m_MethodName: InitiateUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3414,68 +3552,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588126117}
   m_CullTransparentMesh: 1
---- !u!1001 &1661784601
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 835124961}
-    m_Modifications:
-    - target: {fileID: 2830779975284725045, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_Name
-      value: BuildingBlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118495893481705927, guid: 5807ff931bb524141b88438330e08356, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5807ff931bb524141b88438330e08356, type: 3}
---- !u!4 &1661784602 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1790437178206289411, guid: 5807ff931bb524141b88438330e08356, type: 3}
-  m_PrefabInstance: {fileID: 1661784601}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730761699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,18 +3950,18 @@ MonoBehaviour:
   displayName: Spawn Time
   currentLevel: 0
   maxLevelReached: 0
-  speedLevels:
-  - speed: -5
+  upgradeLevels:
+  - value: -5
     price: 200
-  - speed: -10
+  - value: -10
     price: 1000
-  - speed: -15
+  - value: -15
     price: 3000
-  - speed: -20
+  - value: -20
     price: 5500
-  - speed: -25
+  - value: -25
     price: 9500
-  - speed: -30
+  - value: -30
     price: 15000
   statToApply: {fileID: 11400000, guid: a719cf30720c3d84eb5a5bb5dda3762b, type: 2}
 --- !u!1 &1823375331

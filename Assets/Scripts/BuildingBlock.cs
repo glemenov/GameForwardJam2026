@@ -19,7 +19,7 @@ public class BuildingBlock : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (released == false) return;
-        
+
         if (other.collider.CompareTag("Ground") || other.collider.CompareTag("BuildingBlock"))
         {
             released = false;
@@ -32,9 +32,25 @@ public class BuildingBlock : MonoBehaviour
                 if (ConfigsManager.Instance.buildingBlockConfig.perfectScoreAllowed < accuracy)
                 {
                     Debug.Log($"Perfect!");
+                    HeadManager.Instance.playerDataManager.IncreaseCombo();
                 }
-                
-                HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(accuracy) + tierReward);
+                else
+                {
+                    HeadManager.Instance.playerDataManager.ResetCombo();
+                }
+
+                var totalReward = Mathf.Round(accuracy) + tierReward;
+
+                // CCCCOMBO
+                if (HeadManager.Instance.playerDataManager.GetCombo() > 1)
+                {
+                    Debug.Log($"C-C-COMBO! Multiplier: {HeadManager.Instance.playerDataManager.GetComboMultiplier()}");
+
+                    totalReward *= HeadManager.Instance.playerDataManager.GetComboMultiplier();
+                }
+
+                Debug.Log($"Total reward: {totalReward}");
+                HeadManager.Instance.playerDataManager.AddMoney(totalReward);
 
                 return;
             }
@@ -46,40 +62,36 @@ public class BuildingBlock : MonoBehaviour
             }
         }
     }
-    
+
     float CalculateTopFaceOverlap(Bounds baseBounds, Bounds topBounds)
     {
         // For top face placement, we care about X and Z axes (horizontal plane)
         // The Y axis (height) is handled separately
-        
+
         // Calculate overlap on X axis
-        float overlapX = Mathf.Max(0, 
-            Mathf.Min(baseBounds.max.x, topBounds.max.x) - 
-            Mathf.Max(baseBounds.min.x, topBounds.min.x));
-        
+        float overlapX = Mathf.Max(0, Mathf.Min(baseBounds.max.x, topBounds.max.x) - Mathf.Max(baseBounds.min.x, topBounds.min.x));
+
         // Calculate overlap on Z axis
-        float overlapZ = Mathf.Max(0, 
-            Mathf.Min(baseBounds.max.z, topBounds.max.z) - 
-            Mathf.Max(baseBounds.min.z, topBounds.min.z));
-        
+        float overlapZ = Mathf.Max(0, Mathf.Min(baseBounds.max.z, topBounds.max.z) - Mathf.Max(baseBounds.min.z, topBounds.min.z));
+
         return overlapX * overlapZ;
     }
-    
+
     float CalculatePlacementAccuracy(GameObject topCube)
     {
         // Get the bounds of both cubes
-        Bounds baseBounds = this.GetComponent<Renderer>().bounds;
-        Bounds topBounds = topCube.GetComponent<Renderer>().bounds;
-        
+        Bounds baseBounds = this.GetComponentInChildren<Renderer>().bounds;
+        Bounds topBounds = topCube.GetComponentInChildren<Renderer>().bounds;
+
         // Calculate the overlapping area on the top face of the base cube
         float overlapArea = CalculateTopFaceOverlap(baseBounds, topBounds);
-        
+
         // Area of the top face of the base cube
         float baseTopArea = baseBounds.size.x * baseBounds.size.z;
-        
+
         // Calculate accuracy percentage (how much of the base's top is covered)
         float accuracy = (overlapArea / baseTopArea) * 100f;
-        
+
         return Mathf.Clamp(accuracy, 0, 100);
     }
 }

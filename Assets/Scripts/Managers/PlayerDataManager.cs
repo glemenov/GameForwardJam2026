@@ -8,6 +8,8 @@ public class PlayerDataManager : MonoBehaviour
 
     private float _playerMoney;
     private int _currentBlockTier;
+    private float _currentComboMultiplier;
+    private int _currentCombo;
     
     public delegate void OnBlockTierUpgraded();
     public OnBlockTierUpgraded onBlockTierUpgraded;
@@ -19,6 +21,7 @@ public class PlayerDataManager : MonoBehaviour
     void Start()
     {
         _playerMoney = playerConfig.startingMoney;
+        _currentComboMultiplier = playerConfig.defaultComboMultiplier;
     }
 
     // Update is called once per frame
@@ -60,4 +63,11 @@ public class PlayerDataManager : MonoBehaviour
         _currentBlockTier++;
         onBlockTierUpgraded.Invoke();
     }
+    
+    public float GetComboMultiplier() => _currentComboMultiplier;
+    public void UpgradeComboMultiplier(float multiplier) => _currentComboMultiplier = multiplier;
+    
+    public int GetCombo() => _currentCombo;
+    public void IncreaseCombo() => _currentCombo++;
+    public void ResetCombo() => _currentCombo = 0;
 }
