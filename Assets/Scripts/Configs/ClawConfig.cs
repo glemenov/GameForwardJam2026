@@ -6,5 +6,6 @@ namespace Configs
     public class ClawConfig : ScriptableObject
     {
         public float elevationModifier;
+        public float minDistanceForElevation;
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7300f97e57648c2a37dcf97d7bf292b, type: 3}
   m_Name: BuildingBlockConfig
   m_EditorClassIdentifier: Assembly-CSharp::Configs.BuildingBlockConfig
-  blockFallingSpeed: 2
+  blockFallingSpeed: 3
   perfectScoreAllowed: 95

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ClawConfig
   m_EditorClassIdentifier: Assembly-CSharp::Configs.ClawConfig
   elevationModifier: 1
+  minDistanceForElevation: 6.5

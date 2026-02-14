@@ -13,6 +13,8 @@ public class Claw : MonoBehaviour
     public float swingSpeed = 1f;
     public float swingAngle = 30f;
 
+    public BuildingBlock _lastDroppedBlock;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -31,6 +33,8 @@ public class Claw : MonoBehaviour
         // Drop block
         if (Input.GetKey(KeyCode.Space) && block != null)
         {
+            _lastDroppedBlock = block;
+
             block.transform.SetParent(null);
             block.transform.localRotation = Quaternion.Euler(0, 0, 0);
             block.released = true;
@@ -41,10 +45,17 @@ public class Claw : MonoBehaviour
                 var gmbj = Instantiate(buildingBlockPrefab, spawnPoint.position, spawnPoint.rotation);
                 gmbj.transform.SetParent(ropePivot);
                 block = gmbj.GetComponent<BuildingBlock>();
-                
             }, respawnTime.GetValue());
-            
-            transform.localPosition += Vector3.up * ConfigsManager.Instance.clawConfig.elevationModifier;
+        }
+        
+        // Last building block is dropped, checking distance if we need to elevate claw
+        if (_lastDroppedBlock != null && !_lastDroppedBlock.released)
+        {
+            Debug.Log($"Distance {Vector3.Distance(_lastDroppedBlock.transform.position, transform.position)}");
+            if (Vector3.Distance(_lastDroppedBlock.transform.position, transform.position) < ConfigsManager.Instance.clawConfig.minDistanceForElevation)
+            {
+                transform.localPosition += Vector3.up * ConfigsManager.Instance.clawConfig.elevationModifier;
+            }
         }
     }
 }
