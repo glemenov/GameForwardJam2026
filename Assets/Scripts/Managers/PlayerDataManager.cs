@@ -10,12 +10,14 @@ public class PlayerDataManager : MonoBehaviour
     private int _currentBlockTier;
     private float _currentComboMultiplier;
     private int _currentCombo;
+    private int _blockCount;
     
     public delegate void OnBlockTierUpgraded();
     public OnBlockTierUpgraded onBlockTierUpgraded;
     
     //UI
     public TMP_Text playerMoneyText;
+    public TMP_Text blockHeightText;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +35,7 @@ public class PlayerDataManager : MonoBehaviour
     private void UpdateUI()
     {
         playerMoneyText.SetText($"{_playerMoney} AED");
+        blockHeightText.SetText($"{_blockCount}");
     }
 
     public void AddMoney(float amount)
@@ -70,4 +73,6 @@ public class PlayerDataManager : MonoBehaviour
     public int GetCombo() => _currentCombo;
     public void IncreaseCombo() => _currentCombo++;
     public void ResetCombo() => _currentCombo = 0;
+    public int GetBlockCount() => _blockCount;
+    public void UpdateBlockCount() => _blockCount++;
 }

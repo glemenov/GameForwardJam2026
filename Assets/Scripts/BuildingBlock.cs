@@ -24,8 +24,15 @@ public class BuildingBlock : MonoBehaviour
         {
             released = false;
 
+            if (firstBlock)
+            {
+                HeadManager.Instance.playerDataManager.UpdateBlockCount();
+            }
+
             if (other.collider.CompareTag("BuildingBlock"))
             {
+                HeadManager.Instance.playerDataManager.UpdateBlockCount();
+                
                 float accuracy = CalculatePlacementAccuracy(other.gameObject);
                 Debug.Log($"Accuracy {accuracy}");
 

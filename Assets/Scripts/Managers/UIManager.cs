@@ -1,9 +1,9 @@
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     public Canvas DefeatScreen;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
