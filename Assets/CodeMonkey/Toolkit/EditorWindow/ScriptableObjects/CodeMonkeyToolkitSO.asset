@@ -63,27 +63,27 @@ MonoBehaviour:
     version: 1.0.2
     versionUrl: https://cmonkey.co/toolkit
     enabled: 1
-  checkedLastUpdateTimestamp: 1770990290
+  checkedLastUpdateTimestamp: 1771057839
   lastQOTDResponse:
-    questionId: 271
-    questionText: Can Color ever be null?
-    answerA: Yes, always
-    answerB: No
-    answerC: Yes, as Nullable
-    answerD: 
+    questionId: 272
+    questionText: Which namespace do we need to use File.WriteAllText()?
+    answerA: using System;
+    answerB: using UnityEngine;
+    answerC: using System.IO;
+    answerD: using UnityEngine.UI;
     answerE: 
-  lastQotdTimestamp: 1770990290
+  lastQotdTimestamp: 1771057839
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/gameDevReport_2.png
     topText: Stay up to date with the latest in Game Dev straight to your inbox!
     topLink: gamedevreport
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1770990290
+  lastDynamicHeaderTimestamp: 1771057839
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/toolkit">Please write a Review on the Asset
       Store!</a>
-  websiteLatestMessageTimestamp: 1770990290
+  websiteLatestMessageTimestamp: 1771057839
   websiteLatestVideos:
     videos:
     - youTubeId: Vb5BZu7TOIk
@@ -94,4 +94,4 @@ MonoBehaviour:
       title: 'Productivity Tip: DON''T Finish Your Tasks!'
     - youTubeId: B2G1ZTKzJSM
       title: BEST NEW Visual Assets to INSPIRE YOU! (JANUARY 2026)
-  websiteLatestVideosTimestamp: 1770990290
+  websiteLatestVideosTimestamp: 1771057839

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using CodeMonkey.Toolkit.TFunctionTimer;
 using DefaultNamespace;
 using Managers;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 public class Claw : MonoBehaviour
 {
-    public GameObject buildingBlockPrefab;
+    public List<GameObject> blockPrefabs = new List<GameObject>();
     public Transform ropePivot; // The point where rope attaches
     public BuildingBlock block;
     public Transform spawnPoint;
@@ -13,12 +14,17 @@ public class Claw : MonoBehaviour
     public float swingSpeed = 1f;
     public float swingAngle = 30f;
 
-    public BuildingBlock _lastDroppedBlock;
+    private BuildingBlock _lastDroppedBlock;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         respawnTime.Reset();
+    }
+
+    private void Start()
+    {
+        HeadManager.Instance.playerDataManager.onBlockTierUpgraded += UpgradeCurrentBlock;
     }
 
     // Update is called once per frame
@@ -42,7 +48,7 @@ public class Claw : MonoBehaviour
 
             FunctionTimer.Create(() =>
             {
-                var gmbj = Instantiate(buildingBlockPrefab, spawnPoint.position, spawnPoint.rotation);
+                var gmbj = Instantiate(blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()], spawnPoint.position, spawnPoint.rotation);
                 gmbj.transform.SetParent(ropePivot);
                 block = gmbj.GetComponent<BuildingBlock>();
             }, respawnTime.GetValue());
@@ -57,5 +63,15 @@ public class Claw : MonoBehaviour
                 transform.localPosition += Vector3.up * ConfigsManager.Instance.clawConfig.elevationModifier;
             }
         }
+    }
+
+    private void UpgradeCurrentBlock()
+    {
+        var gmbj = Instantiate(blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()], block.transform.position, block.transform.rotation);
+        gmbj.transform.SetParent(ropePivot);
+        
+        Destroy(block);
+        
+        block = gmbj.GetComponent<BuildingBlock>();
     }
 }

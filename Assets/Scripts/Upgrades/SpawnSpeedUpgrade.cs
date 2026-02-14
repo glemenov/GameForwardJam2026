@@ -8,13 +8,10 @@ namespace Upgrades
 {
     public class SpawnSpeedUpgrade : Upgrade
     {
-        public string displayName;
-        public int currentLevel = 0;
         [TableList] public List<SpeedUpgrade> speedLevels = new List<SpeedUpgrade>();
         public Stat statToApply;
-        public bool maxLevelReached = false;
 
-        public void BuyUpgrade()
+        public override void BuyUpgrade()
         {
             if (HeadManager.Instance.playerDataManager.TryDeductMoney(speedLevels[currentLevel].price))
             {
@@ -46,16 +43,15 @@ namespace Upgrades
         {
             return $"{speedLevels[currentLevel].price} AED";
         }
-        
-        public override bool IsMaxLevelReached()
-        {
-            return maxLevelReached;
-        }
     }
 
     [Serializable]
     public abstract class Upgrade : MonoBehaviour
     {
+        public string displayName;
+        public int currentLevel = 0;
+        public bool maxLevelReached = false;
+
         public virtual string DisplayInfo()
         {
             return "";
@@ -65,10 +61,12 @@ namespace Upgrades
         {
             return "";
         }
+        
+        public virtual void BuyUpgrade() {}
 
-        public virtual bool IsMaxLevelReached()
+        public bool IsMaxLevelReached()
         {
-            return false;
+            return maxLevelReached;
         }
     }
 }

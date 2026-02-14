@@ -7,6 +7,10 @@ public class PlayerDataManager : MonoBehaviour
     public PlayerDataConfig playerConfig;
 
     private float _playerMoney;
+    private int _currentBlockTier;
+    
+    public delegate void OnBlockTierUpgraded();
+    public OnBlockTierUpgraded onBlockTierUpgraded;
     
     //UI
     public TMP_Text playerMoneyText;
@@ -47,5 +51,13 @@ public class PlayerDataManager : MonoBehaviour
             Debug.Log($"Can't deduct money: {amount}");
             return false;
         }
+    }
+
+    public int GetBlockTier() => _currentBlockTier;
+
+    public void UpgradeBlockTier()
+    {
+        _currentBlockTier++;
+        onBlockTierUpgraded.Invoke();
     }
 }

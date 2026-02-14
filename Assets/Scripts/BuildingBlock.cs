@@ -5,12 +5,7 @@ public class BuildingBlock : MonoBehaviour
 {
     public bool released;
     public bool firstBlock;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float tierReward;
 
     // Update is called once per frame
     void Update()
@@ -39,7 +34,7 @@ public class BuildingBlock : MonoBehaviour
                     Debug.Log($"Perfect!");
                 }
                 
-                HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(accuracy));
+                HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(accuracy) + tierReward);
 
                 return;
             }

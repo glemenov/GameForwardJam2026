@@ -509,14 +509,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a783796f49967614d9e640e86dd722c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Claw
-  buildingBlockPrefab: {fileID: 2830779975284725045, guid: 5807ff931bb524141b88438330e08356, type: 3}
+  blockPrefabs:
+  - {fileID: 2830779975284725045, guid: 5807ff931bb524141b88438330e08356, type: 3}
+  - {fileID: 2830779975284725045, guid: 764cf94e041bcf44988d448e602d713e, type: 3}
+  - {fileID: 2830779975284725045, guid: 403db9b8a3e1a5241aa62c2c20405445, type: 3}
+  - {fileID: 2830779975284725045, guid: 46007e98f5867d94d86a1cfc8297173e, type: 3}
+  - {fileID: 2830779975284725045, guid: e57a98f111710984d8ad4feae43aee50, type: 3}
+  - {fileID: 2830779975284725045, guid: c01b1b2b2a8152a4cb9faaa409ad2c06, type: 3}
   ropePivot: {fileID: 835124961}
   block: {fileID: 1661784606}
   spawnPoint: {fileID: 1773778298}
   respawnTime: {fileID: 11400000, guid: a719cf30720c3d84eb5a5bb5dda3762b, type: 2}
   swingSpeed: 1.3
   swingAngle: 30
-  _lastDroppedBlock: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 2.08, y: 2.7099998, z: -2.08}
+  m_LocalPosition: {x: 1.31, y: 2.7099998, z: -2.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -723,10 +728,10 @@ RectTransform:
   - {fileID: 2070631872}
   m_Father: {fileID: 1282842859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.078386754, y: 0.81100005}
-  m_AnchorMax: {x: 0.93200004, y: 0.92641944}
-  m_AnchoredPosition: {x: 0, y: -283.6}
-  m_SizeDelta: {x: -4, y: 0}
+  m_AnchorMin: {x: 0.078386754, y: 0.061000004}
+  m_AnchorMax: {x: 0.93200004, y: 0.23354597}
+  m_AnchoredPosition: {x: 0, y: -5.5}
+  m_SizeDelta: {x: -4, y: -21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379745361
 MonoBehaviour:
@@ -1393,6 +1398,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &563103928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 563103929}
+  - component: {fileID: 563103930}
+  m_Layer: 0
+  m_Name: BlockTierUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &563103929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563103928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1250553306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563103930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563103928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d895ec5df7a2054ab3c5c79e85a3404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades.BlockTierUpgrade
+  displayName: Block Tier
+  currentLevel: 0
+  maxLevelReached: 0
+  blockLevels:
+  - tier: 1
+    price: 2000
+  - tier: 2
+    price: 4500
+  - tier: 3
+    price: 9500
+  - tier: 4
+    price: 15000
+  - tier: 5
+    price: 21500
+  - tier: 6
+    price: 30000
 --- !u!1 &566741956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,9 +1637,9 @@ RectTransform:
   m_Father: {fileID: 1282842859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.078386754, y: 0.81100005}
-  m_AnchorMax: {x: 0.93200004, y: 0.92641944}
-  m_AnchoredPosition: {x: 0, y: -18.6}
-  m_SizeDelta: {x: -4, y: 0}
+  m_AnchorMax: {x: 0.93200004, y: 1}
+  m_AnchoredPosition: {x: 0, y: -16.5}
+  m_SizeDelta: {x: -4, y: -25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679699089
 MonoBehaviour:
@@ -2173,6 +2238,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1800310328}
+  - {fileID: 563103929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1260714919
@@ -2427,10 +2493,10 @@ RectTransform:
   - {fileID: 1461557440}
   m_Father: {fileID: 1282842859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.078386754, y: 0.81100005}
-  m_AnchorMax: {x: 0.93200004, y: 0.92641944}
-  m_AnchoredPosition: {x: 0, y: -105.100006}
-  m_SizeDelta: {x: -4, y: 0}
+  m_AnchorMin: {x: 0.078386754, y: 0.56}
+  m_AnchorMax: {x: 0.93200004, y: 0.757}
+  m_AnchoredPosition: {x: 0, y: -14.5}
+  m_SizeDelta: {x: -4, y: -27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297282458
 MonoBehaviour:
@@ -2444,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ba8491a5ab1464d9b6d843c3e2cd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
-  upgrade: {fileID: 1800310329}
+  upgrade: {fileID: 563103930}
   text: {fileID: 566741958}
   priceText: {fileID: 1461557441}
   Button: {fileID: 1297282459}
@@ -2492,8 +2558,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800310329}
-        m_TargetAssemblyTypeName: Upgrades.SpawnSpeedUpgrade, Assembly-CSharp
+      - m_Target: {fileID: 563103930}
+        m_TargetAssemblyTypeName: Upgrades.BlockTierUpgrade, Assembly-CSharp
         m_MethodName: BuyUpgrade
         m_Mode: 1
         m_Arguments:
@@ -2578,10 +2644,10 @@ RectTransform:
   - {fileID: 1782812158}
   m_Father: {fileID: 1282842859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.078386754, y: 0.81100005}
-  m_AnchorMax: {x: 0.93200004, y: 0.92641944}
-  m_AnchoredPosition: {x: 0, y: -192.5}
-  m_SizeDelta: {x: -4, y: 0}
+  m_AnchorMin: {x: 0.078386754, y: 0.29926166}
+  m_AnchorMax: {x: 0.93200004, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -12}
+  m_SizeDelta: {x: -4, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385733809
 MonoBehaviour:
@@ -3435,6 +3501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingBlock
   released: 0
   firstBlock: 1
+  tierReward: 0
 --- !u!54 &1661784610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3857,8 +3924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc12f7ac96b4bfc9428e1e904ef6915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.SpawnSpeedUpgrade
-  displayName: spawn speed
+  displayName: Spawn Time
   currentLevel: 0
+  maxLevelReached: 0
   speedLevels:
   - speed: -5
     price: 200
@@ -3873,7 +3941,6 @@ MonoBehaviour:
   - speed: -30
     price: 15000
   statToApply: {fileID: 11400000, guid: a719cf30720c3d84eb5a5bb5dda3762b, type: 2}
-  maxLevelReached: 0
 --- !u!1 &1823375331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3944,7 +4011,7 @@ Transform:
   m_GameObject: {fileID: 1823375331}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 2.08, y: 2.7099998, z: -2.08}
+  m_LocalPosition: {x: 1.31, y: 2.7099998, z: -2.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3970,7 +4037,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 2.08, y: -3.91, z: -2.08}
+  FollowOffset: {x: 1.31, y: -3.91, z: -2.08}
 --- !u!1 &2036045455
 GameObject:
   m_ObjectHideFlags: 0
