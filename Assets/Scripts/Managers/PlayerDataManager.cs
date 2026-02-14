@@ -58,6 +58,8 @@ public class PlayerDataManager : MonoBehaviour
             return false;
         }
     }
+    
+    public float GetMoney() => _playerMoney;
 
     public int GetBlockTier() => _currentBlockTier;
 
