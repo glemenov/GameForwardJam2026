@@ -159,7 +159,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5159810071407411939}
   cacheVersion: 131858
-  cacheTime: 639067808304680216
+  cacheTime: 639067875980304489
   SerializableEventsDict:
   - key: event:/InGameMusic
     index: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   Path: Assets/DesertAscentAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639067800920169914
+  lastModified: 639067875980233623
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -412,7 +412,7 @@ MonoBehaviour:
   Path: Assets/DesertAscentAudio/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639067808304680216
+  lastModified: 639067875980304489
   FileSizes:
   - Name: Desktop
     Value: 3532320
@@ -432,7 +432,7 @@ MonoBehaviour:
   Path: Assets/DesertAscentAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639067800920179915
+  lastModified: 639067875980233623
   FileSizes:
   - Name: Desktop
     Value: 1154
@@ -499,7 +499,7 @@ MonoBehaviour:
   Path: Assets/DesertAscentAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639067800956697974
+  lastModified: 639067875980304489
   FileSizes:
   - Name: Desktop
     Value: 75264
