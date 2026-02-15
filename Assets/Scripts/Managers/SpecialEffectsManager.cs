@@ -5,6 +5,7 @@ public class SpecialEffectsManager : MonoBehaviour
 {
     public DamageNumber moneyNimberPrefab;
     public DamageNumber perfectPrefab;
+    public DamageNumber comboPrefab;
     
     private static SpecialEffectsManager _instance;
     public static SpecialEffectsManager Instance  { get { return _instance; } }

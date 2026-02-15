@@ -8,22 +8,24 @@ namespace DefaultNamespace
     {
         public float defaultValue;
         public float value;
-        public List<float> percentageModifiers = new List<float>();
+        public float percentageModifier;
 
         public void Reset()
         {
             value = defaultValue;
-            percentageModifiers.Clear();
+            percentageModifier = 0;
         }
 
         public float GetValue()
         {
             float result = value;
 
-            foreach (var percentageModifier in percentageModifiers)
+            if(percentageModifier != 0)
             {
                 result += (value * percentageModifier / 100f);
             }
+
+            Debug.Log($"{name} RETURNING VALUE {result}");
 
             return result;
         }

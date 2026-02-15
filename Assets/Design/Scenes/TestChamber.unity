@@ -391,7 +391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41914496, y: 0.1822704}
   m_AnchorMax: {x: 0.5833768, y: 0.30257508}
-  m_AnchoredPosition: {x: -1, y: -5.7093506}
+  m_AnchoredPosition: {x: -1, y: -5.709381}
   m_SizeDelta: {x: -12.755203, y: 0.72709656}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195767427
@@ -1013,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.078386754, y: 0.061000004}
   m_AnchorMax: {x: 0.93200004, y: 0.23354597}
-  m_AnchoredPosition: {x: 0, y: -5.5}
+  m_AnchoredPosition: {x: 0, y: -5.5000153}
   m_SizeDelta: {x: -4, y: -21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379745361
@@ -2322,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790437178206289411, guid: b2454fa335c6ea94e82d373c737509d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2.28
       objectReference: {fileID: 0}
     - target: {fileID: 1790437178206289411, guid: b2454fa335c6ea94e82d373c737509d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2642,7 +2642,7 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: -1.02, z: 0}
+  - {x: 0, y: -2, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2872,7 +2872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44374916, y: 0.874}
   m_AnchorMax: {x: 0.9898752, y: 0.98200005}
-  m_AnchoredPosition: {x: -8.630615, y: -7}
+  m_AnchoredPosition: {x: -8.63031, y: -7}
   m_SizeDelta: {x: -10.388062, y: -4}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &910224006
@@ -4703,6 +4703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpecialEffectsManager
   moneyNimberPrefab: {fileID: 553582567134190976, guid: ca7c545b13aae5740a162cffcd233764, type: 3}
   perfectPrefab: {fileID: 6304417990759000910, guid: 5a2ed4861dc382a4d9d937b69f90feb1, type: 3}
+  comboPrefab: {fileID: 8509820061804012917, guid: 4818b8965198cc1458c95fd294ba66c2, type: 3}
 --- !u!1 &1739313141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,7 +4866,7 @@ Transform:
   m_GameObject: {fileID: 1773778297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.2799997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

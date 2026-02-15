@@ -12,9 +12,9 @@ namespace Upgrades
 
         public override void InitiateUpgrade()
         {
-            if (!base.TryBuyUpgrade())
+            if (base.TryBuyUpgrade())
             {
-                statToApply.percentageModifiers.Add(upgradeLevels[currentLevel].value);
+                statToApply.percentageModifier = (upgradeLevels[currentLevel].value);
             }
         }
 

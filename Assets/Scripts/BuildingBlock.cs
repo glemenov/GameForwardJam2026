@@ -51,7 +51,7 @@ public class BuildingBlock : MonoBehaviour
                     Debug.Log($"Perfect!");
                     HeadManager.Instance.playerDataManager.IncreaseCombo();
                     accuracy = 100;
-                    SpecialEffectsManager.Instance.perfectPrefab.Spawn(transform.position);
+                    SpecialEffectsManager.Instance.perfectPrefab.Spawn(transform.position + new Vector3(-1f, -1f, 0f));
                 }
                 else
                 {
@@ -74,6 +74,7 @@ public class BuildingBlock : MonoBehaviour
                     Debug.Log($"C-C-COMBO! Multiplier: {HeadManager.Instance.playerDataManager.GetComboMultiplier()}");
 
                     totalReward *= HeadManager.Instance.playerDataManager.GetComboMultiplier() + HeadManager.Instance.playerDataManager.GetCombo();
+                    SpecialEffectsManager.Instance.comboPrefab.Spawn(transform.position + new Vector3(1f, -1f, 0f), $"Combo x{HeadManager.Instance.playerDataManager.GetCombo()}");
                 }
 
                 Debug.Log($"Total reward: {totalReward}");
