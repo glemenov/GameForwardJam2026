@@ -427,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_Big
       objectReference: {fileID: 0}
+    - target: {fileID: 5081574967270136364, guid: eb1231ccf9fbd1b40b5e889d07a384b7, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5606613401495601302, guid: eb1231ccf9fbd1b40b5e889d07a384b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18683
@@ -1147,6 +1151,10 @@ PrefabInstance:
     - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_Name
       value: Palm_High (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
@@ -1924,8 +1932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
+  nonRigidbodyVelocity: 1
+  attenuationObject: {fileID: 1823375331}
 --- !u!1001 &330660070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2088,6 +2096,10 @@ PrefabInstance:
     - target: {fileID: 5529166239374581456, guid: c6419c304db7ebf47925ebce23957a90, type: 3}
       propertyPath: m_Name
       value: Jeep_Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529166239374581456, guid: c6419c304db7ebf47925ebce23957a90, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5529166239374934768, guid: c6419c304db7ebf47925ebce23957a90, type: 3}
       propertyPath: m_LocalScale.x
@@ -3556,6 +3568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Tiny
       objectReference: {fileID: 0}
+    - target: {fileID: 1743804124365887093, guid: 1f28a18cb17bf8b41bb65f4bfc22cb4a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3737,6 +3753,10 @@ PrefabInstance:
     - target: {fileID: 5955421991674483791, guid: 731f4177bf71862499af5f1641d46a20, type: 3}
       propertyPath: m_Name
       value: Mosque
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955421991674483791, guid: 731f4177bf71862499af5f1641d46a20, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4540,6 +4560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011748167870, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2021
@@ -4752,6 +4776,10 @@ PrefabInstance:
     - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_Name
       value: Palm_High (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
@@ -4979,6 +5007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm_Bush_Big (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7153944072423737871, guid: 89ab1d131f87a564cb85b092be8c969d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7497431902318776501, guid: 89ab1d131f87a564cb85b092be8c969d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17799
@@ -5125,6 +5157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm_High (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17799
@@ -5269,6 +5305,10 @@ PrefabInstance:
     - target: {fileID: 2106717782491677008, guid: a8129014f021b784684e26853fb48fa6, type: 3}
       propertyPath: m_Name
       value: Mosque_Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106717782491677008, guid: a8129014f021b784684e26853fb48fa6, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2106717782491913584, guid: a8129014f021b784684e26853fb48fa6, type: 3}
       propertyPath: m_LocalScale.x
@@ -5454,6 +5494,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1823375333}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &717269132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117790, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
+  m_PrefabInstance: {fileID: 1373059151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &735293014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012218520214, guid: 7420b45c31b2f1a4f8afa073eb25787f, type: 3}
@@ -6223,6 +6268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm_High (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17799
@@ -6945,6 +6994,10 @@ PrefabInstance:
     - target: {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
       propertyPath: m_Name
       value: Rocks_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4000011748167870, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8427,6 +8480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm_High (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17799
@@ -8708,6 +8765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: World_Desert (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 117790, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 471028, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7713344
@@ -8760,10 +8821,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64916500031495644, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 117790, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1676571230}
+    - targetCorrespondingSourceObject: {fileID: 117790, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1676571231}
   m_SourcePrefab: {fileID: 100100000, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
 --- !u!1 &1385733807
 GameObject:
@@ -9031,6 +9099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm_Small
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013286731372, guid: 7420b45c31b2f1a4f8afa073eb25787f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012218520214, guid: 7420b45c31b2f1a4f8afa073eb25787f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11287965
@@ -9099,6 +9171,10 @@ PrefabInstance:
     - target: {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
       propertyPath: m_Name
       value: Rocks_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4000011748167870, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
       propertyPath: m_LocalScale.x
@@ -10652,6 +10728,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471028, guid: 6bbec935b8dd1b948877f502858fec26, type: 3}
   m_PrefabInstance: {fileID: 1373059151}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1676571230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717269132}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 6.122747, z: 20.000002}
+  m_Center: {x: -0.00000023841858, y: -1.4676275, z: 0}
+--- !u!114 &1676571231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b244c10ca04d0f43a260a8136f5cea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ground
 --- !u!1001 &1694467489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11675,6 +11784,7 @@ Transform:
   - {fileID: 716234321}
   - {fileID: 236212786}
   - {fileID: 224570540}
+  - {fileID: 2001888922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!114 &1823375334
@@ -11859,6 +11969,10 @@ PrefabInstance:
     - target: {fileID: 7153944072423737871, guid: 89ab1d131f87a564cb85b092be8c969d, type: 3}
       propertyPath: m_Name
       value: Palm_Bush_Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153944072423737871, guid: 89ab1d131f87a564cb85b092be8c969d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7497431902318776501, guid: 89ab1d131f87a564cb85b092be8c969d, type: 3}
       propertyPath: m_LocalScale.x
@@ -12104,6 +12218,10 @@ PrefabInstance:
     - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_Name
       value: Palm_High
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363369960055909731, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3136670108978935769, guid: b291ba06eaf454e458594bd430ca6a41, type: 3}
       propertyPath: m_LocalScale.x
@@ -12430,12 +12548,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001888921}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.13052616, y: -0, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: -1.31, y: -2.0793154, z: 2.710525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823375333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2001888923
 MonoBehaviour:
@@ -12461,9 +12579,9 @@ MonoBehaviour:
   EventPlayTrigger: 1
   EventStopTrigger: 2
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
-  NonRigidbodyVelocity: 0
+  NonRigidbodyVelocity: 1
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -13206,4 +13324,3 @@ SceneRoots:
   - {fileID: 632129694}
   - {fileID: 509746995}
   - {fileID: 1253134451}
-  - {fileID: 2001888922}

@@ -38,7 +38,7 @@ public class BuildingBlock : MonoBehaviour
         {
             released = false;
             
-            RuntimeManager.PlayOneShot(placedSFX);
+            RuntimeManager.PlayOneShot(placedSFX, transform.position);
 
             if (firstBlock)
             {
@@ -58,7 +58,7 @@ public class BuildingBlock : MonoBehaviour
                     HeadManager.Instance.playerDataManager.IncreaseCombo();
                     accuracy = 100;
                     SpecialEffectsManager.Instance.perfectPrefab.Spawn(transform.position + new Vector3(-1f, -1f, 0f));
-                    RuntimeManager.PlayOneShot(perfectComboSFX);
+                    RuntimeManager.PlayOneShot(perfectComboSFX, transform.position);
                 }
                 else
                 {
@@ -68,7 +68,7 @@ public class BuildingBlock : MonoBehaviour
                 if (accuracy <= 51)
                 {
                     // _rigidbody.constraints = RigidbodyConstraints.None;
-                    _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+                    _rigidbody.constraints = RigidbodyConstraints.None;
                     falling = true;
                     return;
                 }

@@ -66,7 +66,7 @@ namespace Upgrades
                     maxLevelReached = true;
                 }
                 
-                RuntimeManager.PlayOneShot(upgradeSFX);
+                RuntimeManager.PlayOneShot(upgradeSFX, HeadManager.Instance.claw.transform.position);
 
                 return true;
             }
