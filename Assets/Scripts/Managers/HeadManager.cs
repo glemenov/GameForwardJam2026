@@ -7,6 +7,7 @@ public class HeadManager : MonoBehaviour
     public PlayerDataManager playerDataManager;
     public GameStateManager gameStateManager;
     public UIManager uiManager;
+    public Claw claw;
     
     private static HeadManager _instance;
 

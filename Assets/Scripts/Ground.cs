@@ -6,7 +6,8 @@ public class Ground : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BuildingBlock"))
         {
-            if (!other.gameObject.GetComponent<BuildingBlock>().firstBlock)
+            var block = other.gameObject.GetComponent<BuildingBlock>();
+            if (!block.firstBlock && block.falling)
                 HeadManager.Instance.Defeat();
         }
     }

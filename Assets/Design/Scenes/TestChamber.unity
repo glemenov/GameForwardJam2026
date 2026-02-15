@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 224570539}
   - component: {fileID: 224570538}
   - component: {fileID: 224570537}
+  - component: {fileID: 224570541}
   m_Layer: 0
   m_Name: GroundChecker
   m_TagString: Ground
@@ -594,12 +595,24 @@ Transform:
   m_GameObject: {fileID: 224570536}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -1.31, y: -4.1, z: 3.25}
+  m_LocalPosition: {x: -1.31, y: -11.2, z: 5.1}
   m_LocalScale: {x: 133.63855, y: 1, z: 91.806046}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1823375333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224570541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224570536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b244c10ca04d0f43a260a8136f5cea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ground
 --- !u!1 &236212783
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +797,7 @@ MonoBehaviour:
   block: {fileID: 696264614}
   spawnPoint: {fileID: 1773778298}
   respawnTime: {fileID: 11400000, guid: a719cf30720c3d84eb5a5bb5dda3762b, type: 2}
-  swingSpeed: 1.3
+  swingSpeed: 0.8
   swingAngle: 30
 --- !u!1 &330585543
 GameObject:
@@ -837,8 +850,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.61
-  far clip plane: 18
+  near clip plane: -4.06
+  far clip plane: 38.3
   field of view: 60.000004
   orthographic: 1
   orthographic size: 3.91
@@ -1000,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.078386754, y: 0.061000004}
   m_AnchorMax: {x: 0.93200004, y: 0.23354597}
-  m_AnchoredPosition: {x: 0, y: -5.5000153}
+  m_AnchoredPosition: {x: 0, y: -5.5}
   m_SizeDelta: {x: -4, y: -21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379745361
@@ -1015,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ba8491a5ab1464d9b6d843c3e2cd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
-  upgrade: {fileID: 1800310329}
+  upgrade: {fileID: 1348343508}
   text: {fileID: 1588126119}
   priceText: {fileID: 2070631873}
   Button: {fileID: 379745362}
@@ -1063,9 +1076,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800310329}
-        m_TargetAssemblyTypeName: Upgrades.SpawnSpeedUpgrade, Assembly-CSharp
-        m_MethodName: BuyUpgrade
+      - m_Target: {fileID: 1348343508}
+        m_TargetAssemblyTypeName: Upgrades.SwingSpeedUpgrade, Assembly-CSharp
+        m_MethodName: InitiateUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2859,7 +2872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44374916, y: 0.874}
   m_AnchorMax: {x: 0.9898752, y: 0.98200005}
-  m_AnchoredPosition: {x: -9, y: -7}
+  m_AnchoredPosition: {x: -8.630615, y: -7}
   m_SizeDelta: {x: -10.388062, y: -4}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &910224006
@@ -2994,6 +3007,7 @@ Transform:
   - {fileID: 1800310328}
   - {fileID: 563103929}
   - {fileID: 1345435013}
+  - {fileID: 1348343507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1260714919
@@ -3423,6 +3437,64 @@ MonoBehaviour:
     price: 10200
   - value: 3
     price: 13100
+--- !u!1 &1348343506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348343507}
+  - component: {fileID: 1348343508}
+  m_Layer: 0
+  m_Name: SwingSpeedUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1348343507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348343506}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1250553306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348343508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348343506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e62a3c78d2d1f4a97252577698c387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwingSpeedUpgrade
+  displayName: Swing Speed
+  currentLevel: 0
+  maxLevelReached: 0
+  upgradeLevels:
+  - value: 0.1
+    price: 300
+  - value: 0.2
+    price: 900
+  - value: 0.3
+    price: 1500
+  - value: 0.5
+    price: 2100
+  - value: 0.7
+    price: 3500
 --- !u!1 &1385733807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4675,7 @@ MonoBehaviour:
   playerDataManager: {fileID: 1730761703}
   gameStateManager: {fileID: 1730761700}
   uiManager: {fileID: 1730761705}
+  claw: {fileID: 302089058}
 --- !u!114 &1730761705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,8 +5193,8 @@ MonoBehaviour:
   Lens:
     FieldOfView: 60.000004
     OrthographicSize: 3.91
-    NearClipPlane: 0.61
-    FarClipPlane: 18
+    NearClipPlane: -4.06
+    FarClipPlane: 38.3
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:

@@ -1,20 +1,21 @@
 using UnityEngine;
+using Upgrades;
 
 namespace Upgrades
 {
-    public class ComboMultiplierUpgrade : Upgrade
+    public class SwingSpeedUpgrade : Upgrade
     {
         public override void InitiateUpgrade()
         {
             if (base.TryBuyUpgrade())
             {
-                HeadManager.Instance.playerDataManager.UpgradeComboMultiplier(upgradeLevels[currentLevel].value);
+                HeadManager.Instance.claw.swingSpeed += upgradeLevels[currentLevel].value;
             }
         }
         
         public override string DisplayInfo()
         {
-            return $"{upgradeLevels[currentLevel].value}x {displayName}";
+            return $"+{upgradeLevels[currentLevel].value} {displayName}";
         }
     }
 }

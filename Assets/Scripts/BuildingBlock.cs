@@ -6,6 +6,7 @@ public class BuildingBlock : MonoBehaviour
 {
     public bool released;
     public bool firstBlock;
+    public bool falling;
     public float tierReward;
 
     private Rigidbody _rigidbody;
@@ -27,6 +28,7 @@ public class BuildingBlock : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (released == false) return;
+        if (falling == true) return;
 
         if (other.collider.CompareTag("Ground") || other.collider.CompareTag("BuildingBlock"))
         {
@@ -55,11 +57,13 @@ public class BuildingBlock : MonoBehaviour
                 {
                     HeadManager.Instance.playerDataManager.ResetCombo();
                 }
-
-                if (accuracy <= 49)
+                
+                if (accuracy <= 51)
                 {
                     // _rigidbody.constraints = RigidbodyConstraints.None;
                     _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+                    falling = true;
+                    return;
                 }
 
                 var totalReward = Mathf.Round(accuracy) + tierReward;
