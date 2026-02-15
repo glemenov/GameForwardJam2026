@@ -37,15 +37,18 @@ MonoBehaviour:
   - {fileID: 2809828756171607349}
   - {fileID: -1610881471742186360}
   - {fileID: 676518070386446177}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 7845763977089102225}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2809828756171607349}
   StringsBanks:
   - {fileID: 6423147504318141629}
   cacheVersion: 131858
-  cacheTime: 639066967867241368
-  SerializableEventsDict: []
+  cacheTime: 639067682422475651
+  SerializableEventsDict:
+  - key: event:/TestSound
+    index: 0
 --- !u!114 &676518070386446177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,10 +64,10 @@ MonoBehaviour:
   Path: "../../Users/\u041F\u041A/Desktop/Jam/DesertAscentAudio/Build/Desktop/SFX.bank"
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639066967867201385
+  lastModified: 639067682422475651
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 4576
   Exists: 1
 --- !u!114 &2809828756171607349
 MonoBehaviour:
@@ -81,7 +84,7 @@ MonoBehaviour:
   Path: "../../Users/\u041F\u041A/Desktop/Jam/DesertAscentAudio/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639066967867141393
+  lastModified: 639067682421336156
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -101,8 +104,35 @@ MonoBehaviour:
   Path: "../../Users/\u041F\u041A/Desktop/Jam/DesertAscentAudio/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639066967867161358
+  lastModified: 639067682421346165
   FileSizes:
   - Name: Desktop
-    Value: 816
+    Value: 864
   Exists: 1
+--- !u!114 &7845763977089102225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TestSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/TestSound
+  Guid:
+    Data1: -1702179829
+    Data2: 1112934876
+    Data3: -1786229329
+    Data4: 894123231
+  Banks:
+  - {fileID: 676518070386446177}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

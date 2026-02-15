@@ -42,14 +42,24 @@ public class Claw : MonoBehaviour
             _lastDroppedBlock = block;
 
             block.transform.SetParent(null);
-            block.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            Quaternion prefabRotation2 = block.transform.rotation;
+            Quaternion newRotation2 = Quaternion.Euler(0, block.transform.eulerAngles.y, 0);
+            block.transform.localRotation = newRotation2;
             block.released = true;
             block = null;
 
             FunctionTimer.Create(() =>
             {
-                var gmbj = Instantiate(blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()], spawnPoint.position, spawnPoint.rotation);
+                var blockPrefab = blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()];
+// Get only the Y rotation from the prefab
+                Quaternion prefabRotation = blockPrefab.transform.rotation;
+                Quaternion newRotation = Quaternion.Euler(0, prefabRotation.eulerAngles.y, 0);
+                var gmbj = Instantiate(blockPrefab, spawnPoint.position, newRotation);
+                
+                // var gmbj = Instantiate(blockPrefabs[HeadManager.Instance.playerDataManager.GetBlockTier()], spawnPoint.position, spawnPoint.rotation);
+                
                 gmbj.transform.SetParent(ropePivot);
+                gmbj.transform.localRotation = newRotation;
                 block = gmbj.GetComponent<BuildingBlock>();
             }, respawnTime.GetValue());
         }
