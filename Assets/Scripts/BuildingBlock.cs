@@ -1,4 +1,6 @@
+using DamageNumbersPro;
 using Managers;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class BuildingBlock : MonoBehaviour
@@ -58,7 +60,8 @@ public class BuildingBlock : MonoBehaviour
 
                 Debug.Log($"Total reward: {totalReward}");
                 HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(totalReward));
-                SpecialEffectsManager.Instance.moneyTextFeedback.PlayFeedbacks(this.transform.position, Mathf.Round(totalReward));
+
+                DamageNumber moneyNumber = SpecialEffectsManager.Instance.moneyNimberPrefab.Spawn(transform.position, Mathf.Round(totalReward));
 
                 return;
             }

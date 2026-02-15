@@ -1,9 +1,9 @@
-using MoreMountains.Feedbacks;
+using DamageNumbersPro;
 using UnityEngine;
 
 public class SpecialEffectsManager : MonoBehaviour
 {
-    public MMF_Player moneyTextFeedback;
+    public DamageNumber moneyNimberPrefab;
     
     private static SpecialEffectsManager _instance;
     public static SpecialEffectsManager Instance  { get { return _instance; } }
