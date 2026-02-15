@@ -58,6 +58,7 @@ public class BuildingBlock : MonoBehaviour
 
                 Debug.Log($"Total reward: {totalReward}");
                 HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(totalReward));
+                SpecialEffectsManager.Instance.moneyTextFeedback.PlayFeedbacks(this.transform.position, Mathf.Round(totalReward));
 
                 return;
             }
