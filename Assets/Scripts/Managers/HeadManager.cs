@@ -1,6 +1,9 @@
 using System;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HeadManager : MonoBehaviour
 {
@@ -8,6 +11,9 @@ public class HeadManager : MonoBehaviour
     public GameStateManager gameStateManager;
     public UIManager uiManager;
     public Claw claw;
+    
+    public Slider volumeSlider;
+    private Bus _masterBus;
     
     private static HeadManager _instance;
 
@@ -24,13 +30,13 @@ public class HeadManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _masterBus = RuntimeManager.GetBus("bus:/");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _masterBus.setVolume(volumeSlider.value);
     }
 
     public void Restart()

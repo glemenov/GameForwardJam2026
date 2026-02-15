@@ -67,7 +67,7 @@ namespace Upgrades
                 }
                 
                 RuntimeManager.PlayOneShot(upgradeSFX, HeadManager.Instance.claw.transform.position);
-
+                
                 return true;
             }
 
