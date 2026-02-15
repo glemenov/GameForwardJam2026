@@ -1,5 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ namespace MainMenu
     {
         [SerializeField] private EventReference mainMenuMusic;
         EventInstance mainMenuMusicEvent;
+        public MMF_Player player;
 
         public Slider volumeSlider;
         private Bus _masterBus;
@@ -19,6 +21,7 @@ namespace MainMenu
         {
             // mainMenuMusic = RuntimeManager.CreateInstance(mainMenuMusic);
             _masterBus = RuntimeManager.GetBus("bus:/");
+            player.PlayFeedbacks();
         }
 
         // Update is called once per frame
