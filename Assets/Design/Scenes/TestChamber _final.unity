@@ -3853,6 +3853,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d895ec5df7a2054ab3c5c79e85a3404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.BlockTierUpgrade
+  upgradeSFX:
+    Guid:
+      Data1: -1997005995
+      Data2: 1207819779
+      Data3: 640458660
+      Data4: 1316657973
+    Path: event:/SFX/UpgradeSFX
   displayName: Block Tier
   currentLevel: 0
   maxLevelReached: 0
@@ -4515,7 +4522,7 @@ Transform:
   m_GameObject: {fileID: 623363383}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0.93999535, y: 137.2, z: 3.5}
+  m_LocalPosition: {x: 0.93999535, y: 136.4, z: 4.38}
   m_LocalScale: {x: 1.5131271, y: 0.041505076, z: 11.427371}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7421,7 +7428,7 @@ Transform:
   m_GameObject: {fileID: 1172265855}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0.93999535, y: 78.3, z: 3.96}
+  m_LocalPosition: {x: 0.93999535, y: 78.3, z: 4.47}
   m_LocalScale: {x: 1.5131271, y: 0.030262541, z: 0.84878856}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8526,6 +8533,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e21bfdc68209c7458c85b564ebaf545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.ComboMultiplierUpgrade
+  upgradeSFX:
+    Guid:
+      Data1: -1997005995
+      Data2: 1207819779
+      Data3: 640458660
+      Data4: 1316657973
+    Path: event:/SFX/UpgradeSFX
   displayName: Combo Multiplier
   currentLevel: 0
   maxLevelReached: 0
@@ -8661,6 +8675,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e62a3c78d2d1f4a97252577698c387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwingSpeedUpgrade
+  upgradeSFX:
+    Guid:
+      Data1: -1997005995
+      Data2: 1207819779
+      Data3: 640458660
+      Data4: 1316657973
+    Path: event:/SFX/UpgradeSFX
   displayName: Swing Speed
   currentLevel: 0
   maxLevelReached: 0
@@ -9761,7 +9782,7 @@ Transform:
   m_GameObject: {fileID: 1487297608}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0.93999535, y: 72.55, z: 4.09}
+  m_LocalPosition: {x: 0.93999535, y: 72.55, z: 4.48}
   m_LocalScale: {x: 1.5131271, y: 0.030262541, z: 0.84878856}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11552,6 +11573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc12f7ac96b4bfc9428e1e904ef6915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.SpawnSpeedUpgrade
+  upgradeSFX:
+    Guid:
+      Data1: -1997005995
+      Data2: 1207819779
+      Data3: 640458660
+      Data4: 1316657973
+    Path: event:/SFX/UpgradeSFX
   displayName: Spawn Time
   currentLevel: 0
   maxLevelReached: 0
@@ -12377,6 +12405,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 418496, guid: 6263e39c68f14e34c97af32d4924aa23, type: 3}
   m_PrefabInstance: {fileID: 1997123866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2001888921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001888922}
+  - component: {fileID: 2001888923}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001888922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001888921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001888923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001888921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1366460781
+      Data2: 1327550212
+      Data3: 574639778
+      Data4: -1912394843
+    Path: event:/InGameMusic
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2036045455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13115,3 +13206,4 @@ SceneRoots:
   - {fileID: 632129694}
   - {fileID: 509746995}
   - {fileID: 1253134451}
+  - {fileID: 2001888922}

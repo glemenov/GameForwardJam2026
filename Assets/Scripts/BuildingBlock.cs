@@ -1,4 +1,5 @@
 using DamageNumbersPro;
+using FMODUnity;
 using Managers;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ public class BuildingBlock : MonoBehaviour
     public bool falling;
     public float tierReward;
 
+    public EventReference placedSFX;
+    public EventReference perfectComboSFX;
+    
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -33,6 +37,8 @@ public class BuildingBlock : MonoBehaviour
         if (other.collider.CompareTag("Ground") || other.collider.CompareTag("BuildingBlock"))
         {
             released = false;
+            
+            RuntimeManager.PlayOneShot(placedSFX);
 
             if (firstBlock)
             {
@@ -52,6 +58,7 @@ public class BuildingBlock : MonoBehaviour
                     HeadManager.Instance.playerDataManager.IncreaseCombo();
                     accuracy = 100;
                     SpecialEffectsManager.Instance.perfectPrefab.Spawn(transform.position + new Vector3(-1f, -1f, 0f));
+                    RuntimeManager.PlayOneShot(perfectComboSFX);
                 }
                 else
                 {

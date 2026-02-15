@@ -51,6 +51,20 @@ MonoBehaviour:
   firstBlock: 0
   falling: 0
   tierReward: 400
+  placedSFX:
+    Guid:
+      Data1: -916619236
+      Data2: 1092466156
+      Data3: 2139710592
+      Data4: 1507474729
+    Path: event:/SFX/BuildingBlockSFX
+  perfectComboSFX:
+    Guid:
+      Data1: -1750577678
+      Data2: 1202019699
+      Data3: -1285497981
+      Data4: 227327839
+    Path: event:/SFX/ComboPerfectSFX
 --- !u!65 &-1304150037386053260
 BoxCollider:
   m_ObjectHideFlags: 0

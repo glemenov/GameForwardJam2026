@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using FMODUnity;
 using TriInspector;
 using UnityEngine;
 
@@ -27,6 +28,7 @@ namespace Upgrades
     [Serializable]
     public abstract class Upgrade : MonoBehaviour
     {
+        public EventReference upgradeSFX;
         public string displayName;
         public int currentLevel = 0;
         public bool maxLevelReached = false;
@@ -63,6 +65,8 @@ namespace Upgrades
                 {
                     maxLevelReached = true;
                 }
+                
+                RuntimeManager.PlayOneShot(upgradeSFX);
 
                 return true;
             }
