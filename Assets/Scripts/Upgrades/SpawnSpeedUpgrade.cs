@@ -47,7 +47,7 @@ namespace Upgrades
 
         public virtual string PriceInfo()
         {
-            return $"{upgradeLevels[currentLevel].price} AED";
+            return $"{upgradeLevels[currentLevel].price}";
         }
         
         public virtual void InitiateUpgrade() {}

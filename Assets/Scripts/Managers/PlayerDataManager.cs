@@ -34,7 +34,7 @@ public class PlayerDataManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        playerMoneyText.SetText($"{_playerMoney} AED");
+        playerMoneyText.SetText($"{_playerMoney}");
         blockHeightText.SetText($"{_blockCount}");
     }
 
