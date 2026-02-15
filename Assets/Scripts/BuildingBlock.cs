@@ -14,7 +14,8 @@ public class BuildingBlock : MonoBehaviour
     public EventReference perfectComboSFX;
     
     private Rigidbody _rigidbody;
-
+    public GameObject impactParticleEffect;
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -39,6 +40,7 @@ public class BuildingBlock : MonoBehaviour
             released = false;
             
             RuntimeManager.PlayOneShot(placedSFX, transform.position);
+            Instantiate(impactParticleEffect, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
 
             if (firstBlock)
             {

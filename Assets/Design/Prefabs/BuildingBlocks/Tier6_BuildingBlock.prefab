@@ -65,6 +65,7 @@ MonoBehaviour:
       Data3: -1285497981
       Data4: 227327839
     Path: event:/SFX/ComboPerfectSFX
+  impactParticleEffect: {fileID: 5266004569542564235, guid: c3a2292dc66327f47a9dbb8d7ce8b8bb, type: 3}
 --- !u!65 &1811858630785492331
 BoxCollider:
   m_ObjectHideFlags: 0
