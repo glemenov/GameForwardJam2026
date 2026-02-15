@@ -1,6 +1,5 @@
 using DamageNumbersPro;
 using Managers;
-using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class BuildingBlock : MonoBehaviour
@@ -8,6 +7,13 @@ public class BuildingBlock : MonoBehaviour
     public bool released;
     public bool firstBlock;
     public float tierReward;
+
+    private Rigidbody _rigidbody;
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,10 +48,18 @@ public class BuildingBlock : MonoBehaviour
                 {
                     Debug.Log($"Perfect!");
                     HeadManager.Instance.playerDataManager.IncreaseCombo();
+                    accuracy = 100;
+                    SpecialEffectsManager.Instance.perfectPrefab.Spawn(transform.position);
                 }
                 else
                 {
                     HeadManager.Instance.playerDataManager.ResetCombo();
+                }
+
+                if (accuracy <= 49)
+                {
+                    // _rigidbody.constraints = RigidbodyConstraints.None;
+                    _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
                 }
 
                 var totalReward = Mathf.Round(accuracy) + tierReward;
@@ -55,21 +69,13 @@ public class BuildingBlock : MonoBehaviour
                 {
                     Debug.Log($"C-C-COMBO! Multiplier: {HeadManager.Instance.playerDataManager.GetComboMultiplier()}");
 
-                    totalReward *= HeadManager.Instance.playerDataManager.GetComboMultiplier();
+                    totalReward *= HeadManager.Instance.playerDataManager.GetComboMultiplier() + HeadManager.Instance.playerDataManager.GetCombo();
                 }
 
                 Debug.Log($"Total reward: {totalReward}");
                 HeadManager.Instance.playerDataManager.AddMoney(Mathf.Round(totalReward));
 
                 DamageNumber moneyNumber = SpecialEffectsManager.Instance.moneyNimberPrefab.Spawn(transform.position, Mathf.Round(totalReward));
-
-                return;
-            }
-
-            // We lose
-            if (!firstBlock)
-            {
-                HeadManager.Instance.Defeat();
             }
         }
     }

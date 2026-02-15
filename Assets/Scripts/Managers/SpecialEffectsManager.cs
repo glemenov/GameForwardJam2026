@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpecialEffectsManager : MonoBehaviour
 {
     public DamageNumber moneyNimberPrefab;
+    public DamageNumber perfectPrefab;
     
     private static SpecialEffectsManager _instance;
     public static SpecialEffectsManager Instance  { get { return _instance; } }
