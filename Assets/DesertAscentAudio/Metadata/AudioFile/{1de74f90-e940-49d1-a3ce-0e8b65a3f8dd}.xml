@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1de74f90-e940-49d1-a3ce-0e8b65a3f8dd}">
+		<property name="assetPath">
+			<value>SFX/building_block_landi_#4-1771169849252.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.056</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8bc66c25-bc1c-4bdf-bb7e-d23212697dd9}</destination>
+		</relationship>
+	</object>
+</objects>

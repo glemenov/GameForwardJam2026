@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4f765ec3-1d38-47e7-815d-cfdc4e54b91a}">
+		<property name="assetPath">
+			<value>SFX/upgrade_sound_effect_#4-1771170178690.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.74399999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8bc66c25-bc1c-4bdf-bb7e-d23212697dd9}</destination>
+		</relationship>
+	</object>
+</objects>
