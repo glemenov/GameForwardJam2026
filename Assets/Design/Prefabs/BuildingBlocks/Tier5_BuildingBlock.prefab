@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingBlock
   released: 0
   firstBlock: 0
+  falling: 0
   tierReward: 400
 --- !u!65 &-1304150037386053260
 BoxCollider:
@@ -106,6 +107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1790437178206289411}
     m_Modifications:
+    - target: {fileID: 1211668088147697754, guid: 33c8ddefa365c004d8d656fe838e57dd, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2468000860710859904, guid: 33c8ddefa365c004d8d656fe838e57dd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.052858617
