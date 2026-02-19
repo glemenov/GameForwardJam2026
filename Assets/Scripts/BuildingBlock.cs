@@ -8,6 +8,7 @@ public class BuildingBlock : MonoBehaviour
     public bool released;
     public bool firstBlock;
     public bool falling;
+    public bool locked;
     public float tierReward;
 
     public EventReference placedSFX;
@@ -33,9 +34,9 @@ public class BuildingBlock : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (released == false) return;
-        if (falling == true) return;
+        if (falling) return;
 
-        if (other.collider.CompareTag("Ground") || other.collider.CompareTag("BuildingBlock"))
+        if (other.collider.CompareTag("BuildingBlock"))
         {
             released = false;
             

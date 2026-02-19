@@ -48,7 +48,7 @@ public class HeadManager : MonoBehaviour
     {
         uiManager.DefeatScreen.canvas.enabled = true;
         uiManager.DefeatScreen.heightReachedText.SetText(playerDataManager.GetBlockCount().ToString());
-        uiManager.DefeatScreen.moneyEarnedText.SetText(playerDataManager.GetMoney().ToString() +" AED");
+        //uiManager.DefeatScreen.moneyEarnedText.SetText(playerDataManager.GetMoney().ToString() +" AED");
     }
 
     public void ExitToMainMenu()
